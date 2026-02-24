@@ -88,8 +88,8 @@ export const useDragGestures = ({
       // or we can just use `translationX` representing the absolute distance moved since touch down.
       
       const newPos: Position = {
-        x: currentPos.x + (event as any).changeX,
-        y: currentPos.y + (event as any).changeY,
+        x: currentPos.x + ((event as unknown) as { changeX: number }).changeX,
+        y: currentPos.y + ((event as unknown) as { changeY: number }).changeY,
       };
 
       positions.value = {
