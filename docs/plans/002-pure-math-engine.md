@@ -11,12 +11,12 @@ Implement the pure, framework-agnostic mathematical foundation for the continuou
 - [ ] Comprehensive unit tests exist for all mathematical logic in `tests/math/`, targeting 100% coverage.
 
 ## Progress
-- [ ] Define Zod domain types (`Position`, `Size`, `GridConfig`).
-- [ ] Implement `calculateItemPosition(index, config)` in `coordinates.ts`.
-- [ ] Implement `resolveCoordinateToIndex(x, y, config)` in `coordinates.ts`.
-- [ ] Implement `calculateIntersectionArea(rectA, rectB)` (for drop-zone detection) in `coordinates.ts`.
-- [ ] Provide spring generation functions in `spring-configs.ts` according to `.env` parameters.
-- [ ] Write tests covering edge cases (negative bounds, out-of-bounds indices, empty arrays).
+- [x] Define Zod domain types (`Position`, `Size`, `GridConfig`).
+- [x] Implement `calculateItemPosition(index, config)` in `coordinates.ts`.
+- [x] Implement `resolveCoordinateToIndex(x, y, config)` in `coordinates.ts`.
+- [x] Implement `calculateIntersectionArea(rectA, rectB)` (for drop-zone detection) in `coordinates.ts`.
+- [x] Provide spring generation functions in `spring-configs.ts` according to `.env` parameters.
+- [x] Write tests covering edge cases (negative bounds, out-of-bounds indices, empty arrays).
 
 ## Step-by-Step Implementation Plan
 1. Define robust Zod schemas in `src/types/domain.ts` that represent `ItemSize`, `BoardDimensions`, and visual permutations. Export TypeScript types inferred from these schemas.
@@ -44,4 +44,4 @@ Implement the pure, framework-agnostic mathematical foundation for the continuou
 - Utilizing strictly functional pure math to ensure that the layout remains deterministic regardless of the UI framework.
 
 ## Retrospective / Surprises
-- (To be filled upon completion of the mathematical foundation)
+- Achieved **100% branch and statement coverage** with robust handling of padding, column/row overlaps, and structural edge cases. The isolation between logic and framework has immediately proven to make geometry very easily testable via Jest and standard generic Node operations prior to touching any Reanimated components.
