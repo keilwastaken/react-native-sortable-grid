@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, StatusBar, SafeAreaView } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { ContinuousBoard } from './src/components/continuous-board';
-import { GridConfig } from './src/types/domain';
-
+import { ContinuousBoard, GridConfig } from 'react-native-sortable-board';
 // Example Application Data
 const generateMockData = (count: number) => {
   return Array.from({ length: count }).map((_, i) => ({
